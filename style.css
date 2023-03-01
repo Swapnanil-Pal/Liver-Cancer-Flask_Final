@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------*/
+
+.navbar 
+{
+  background-image: linear-gradient(15deg, black 0%, rgb(3, 8, 105) 120%);
+}
+
+.navbar ul
+{
+  overflow: auto;
+}
+  
+/* Navbar links */
+.navbar a 
+{
+  float: right;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 10px;
+
+}
+  
+/* Navbar links on mouse-over */
+.navbar a:hover 
+{
+  background-color: rgba(237,32,123,255);
+}
+  
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) 
+{
+  .navbar a 
+  {
+    float: none;
+    display: block;
+  }
+}
+
+
+.navbar input
+{
+  border: 2px black;
+  border-radius: 20px;
+  padding: 30px 300px;
+}
+
+.logo
+{ 
+  position: relative;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 150px;
+  height: auto; 
+}
+
+/*------------------------------------------------------------------------FORM LAYOUT----------------------------------------------------------------------------------*/
+
+.bg-img {
+     background-image: url("https://assets.technologynetworks.com/production/dynamic/images/content/322699/hepatitis-c-drugs-reduce-liver-related-deaths-by-46-322699-640x360.jpg");
+     min-height: 980px;
+     margin-top: 2px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    align-content: center;
+    margin-left: 525px;
+    margin-top: 10px;
+    max-width: 600px;
+    padding: 15px;
+    background-color: white;
+    border: 0cap;
+  
+  }
+  
+  /* Full-width input fields */
+    input[type=text], input[type=text] 
+    {
+    width: 100%;
+    padding: 15px;
+    margin: 3px 0 20px 0;
+    border: 0cap;
+    background: #f1f1f1;
+    
+  }
+  
+  input[type=text]:focus, input[type=text]:focus {
+    background-color: #ddd;
+    outline:#0470aa;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: rgb(10, 10, 132);
+    color: white;
+    padding: 16px 20px;
+    border: black;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+  }
+  
+  .btn:hover {
+    opacity: 10;
+  }
