@@ -9,7 +9,7 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>LIVER CANCER WEBSITE</title>
 </head>
 
@@ -33,7 +33,7 @@
     </header>  
     
     <div class="bg-img">
-      <form method="POST" action="http://jkorpela.fi/cgi-bin/echo.cgi" class="container">
+      <form action="{{ url_for('predict')}}"method="POST" class="container">
     <h1>Liver Cancer Prediction</h1>
     <p>Please Fill in the Required Details :</p><br>
         <TABLE BORDER="0">
@@ -82,6 +82,7 @@
         </TABLE>
         <P><INPUT TYPE="SUBMIT" VALUE="PREDICT" NAME="B1" CLASS="btn"></P>
       </form>  
+      {{ prediction_text }}
  </div>
 </body>
 </html>
