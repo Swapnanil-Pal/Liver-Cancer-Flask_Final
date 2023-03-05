@@ -33,56 +33,58 @@
     </header>  
     
     <div class="bg-img">
-      <form action="{{ url_for('predict')}}"method="POST" class="container">
+    <form action="{{ url_for('predict')}}"method="POST" class="container">
     <h1>Liver Cancer Prediction</h1>
     <p>Please Fill in the Required Details :</p><br>
-        <TABLE BORDER="0">
+        
+        <Table Border="0">
           <TR>
-           <TD>Age</TD>
-            <TD>
-            <INPUT TYPE="TEXT" NAME="AGE">
-            </TD>
+          <TD>Age</TD>
+          <TD><Input type="Text" Name="Age" Placeholder="A" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Gender</TD>
-            <TD><INPUT TYPE="TEXT" NAME="GENDER"></TD>
+          <TD>Gender</TD>
+          <TD><Input type="Text" Name="Gender" Placeholder="B" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Total Bilirubin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="TOTAL BILIRUBIN"></TD>
+          <TD>Total Bilirubin</TD>
+          <TD><Input type="Text" Name="Total Bilirubin" Placeholder="C" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Direct Bilirubin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="DIRECT BILIRUBIN"></TD>
+          <TD>Direct Bilirubin</TD>
+          <TD><Input Type="Text" Name="Direct Bilirubin" Placeholder="D" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Alkaline Phosphotase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Alkaline Phosphotase"></TD>
+          <TD>Alkaline Phosphotase</TD>
+          <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="E" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Alamine Aminotransferase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Alamine Aminotransferase"></TD>
+          <TD>Alamine Aminotransferase</TD>
+          <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="F" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Aspartate Aminotransferase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Aspartate Aminotransferase"></TD>
+          <TD>Aspartate Aminotransferase</TD>
+          <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="G" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Total Protiens</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Total Protiens"></TD>
+          <TD>Total Protiens</TD>
+          <TD><Input type="Text" Name="Total Protiens" Placeholder="H" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Albumin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Albumin"></TD>
+          <TD>Albumin</TD>
+          <TD><Input type="Text" Name="Albumin" Placeholder="I" Required="Required"></TD>
           </TR>
           <TR>
-            <TD>Albumin and Globulin Ratio</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Albumin and Globulin Ratio"></TD>
+          <TD>Albumin and Globulin Ratio</TD>
+          <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="J" Required="Required"></TD>
           </TR>
-        </TABLE>
-        <P><INPUT TYPE="SUBMIT" VALUE="PREDICT" NAME="B1" CLASS="btn"></P>
+        </Table>
+              
+      <p><Input type="Submit" Value="Predict" Name="B1" Class="btn"></p>
       </form>  
+              
       {{ prediction_text }}
+              
  </div>
 </body>
 </html>
