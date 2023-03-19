@@ -9,7 +9,7 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>LIVER CANCER WEBSITE</title>
 </head>
 
@@ -22,7 +22,7 @@
 
       <nav class="navbar">
         <ul>
-        <img class="logo" src="C:\Users\SOMNATH\Dropbox\My PC (SWAP)\Downloads\rsz_logoimage.png" ALT="align box">
+        <img class="logo" src="" ALT="align box">
         <a href="#"><i class="fa fa-sign-out"></i> Sign Out </a>
         <a href="#"><i class="fa fa-product-hunt"></i> Prediction</a>
         <a href="#"><i class="fa fa-user-md"></i> Doctor</a>
@@ -33,59 +33,71 @@
     </header>  
     
     <div class="bg-img">
+      <h3>Popup box Windows without JavaScript</h3>
+      <div class="box">
+	     <a class="button" href="#popup1">Let me Pop up</a>
+      </div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Hello</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+</div>
+
     <form action="{{ url_for('predict')}}"method="POST" class="container">
     <h1>Liver Cancer Prediction</h1>
     <p>Please Fill in the Required Details :</p><br>
-        
-        <Table Border="0">
+        <TABLE BORDER="0">
           <TR>
-          <TD>Age</TD>
-          <TD><Input type="Text" Name="Age" Placeholder="-" Required="Required"></TD>
+           <TD>Age</TD>
+            <TD>
+            <INPUT TYPE="TEXT" NAME="AGE">
+            </TD>
           </TR>
           <TR>
-          <TD>Gender</TD>
-          <TD><Input type="Text" Name="Gender" Placeholder="-" Required="Required"></TD>
+            <TD>Gender</TD>
+            <TD><INPUT TYPE="TEXT" NAME="GENDER"></TD>
           </TR>
           <TR>
-          <TD>Total Bilirubin</TD>
-          <TD><Input type="Text" Name="Total Bilirubin" Placeholder="-" Required="Required"></TD>
+            <TD>Total Bilirubin</TD>
+            <TD><INPUT TYPE="TEXT" NAME="TOTAL BILIRUBIN"></TD>
           </TR>
           <TR>
-          <TD>Direct Bilirubin</TD>
-          <TD><Input type="Text" Name="Direct Bilirubin" Placeholder="-" Required="Required"></TD>
+            <TD>Direct Bilirubin</TD>
+            <TD><INPUT TYPE="TEXT" NAME="DIRECT BILIRUBIN"></TD>
           </TR>
           <TR>
-          <TD>Alkaline Phosphotase</TD>
-          <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="-" Required="Required"></TD>
+            <TD>Alkaline Phosphotase</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Alkaline Phosphotase"></TD>
           </TR>
           <TR>
-          <TD>Alamine Aminotransferase</TD>
-          <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="-" Required="Required"></TD>
+            <TD>Alamine Aminotransferase</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Alamine Aminotransferase"></TD>
           </TR>
           <TR>
-          <TD>Aspartate Aminotransferase</TD>
-          <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="-" Required="Required"></TD>
+            <TD>Aspartate Aminotransferase</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Aspartate Aminotransferase"></TD>
           </TR>
           <TR>
-          <TD>Total Protiens</TD>
-          <TD><Input type="Text" Name="Total Protiens" Placeholder="-" Required="Required"></TD>
+            <TD>Total Protiens</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Total Protiens"></TD>
           </TR>
           <TR>
-          <TD>Albumin</TD>
-          <TD><Input type="Text" Name="Albumin" Placeholder="-" Required="Required"></TD>
+            <TD>Albumin</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Albumin"></TD>
           </TR>
           <TR>
-          <TD>Albumin and Globulin Ratio</TD>
-          <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="-" Required="Required"></TD>
+            <TD>Albumin and Globulin Ratio</TD>
+            <TD><INPUT TYPE="TEXT" NAME="Albumin and Globulin Ratio"></TD>
           </TR>
-        </Table>
-        
-        <Button type="Submit" Class="btn">Predict</Button>     
-    
+        </TABLE>
+        <P><INPUT TYPE="SUBMIT" VALUE="PREDICT" NAME="B1" CLASS="btn"></P>
       </form>  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
-                          
+      {{ prediction_text }}
  </div>
-        {{ prediction_text }}             
 </body>
 </html>
