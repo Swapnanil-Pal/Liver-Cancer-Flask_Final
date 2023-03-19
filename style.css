@@ -29,6 +29,7 @@
   text-decoration: none;
   font-size: 17px;
   margin-top: 10px;
+
 }
   
 /* Navbar links on mouse-over */
@@ -46,6 +47,7 @@
     display: block;
   }
 }
+
 
 .navbar input
 {
@@ -67,7 +69,7 @@
 
 .bg-img {
      background-image: url("https://assets.technologynetworks.com/production/dynamic/images/content/322699/hepatitis-c-drugs-reduce-liver-related-deaths-by-46-322699-640x360.jpg");
-     min-height: 980px;
+     min-height: 1075px;
      margin-top: 2px;
 
     /* Center and scale the image nicely */
@@ -87,6 +89,7 @@
     padding: 15px;
     background-color: white;
     border: 0cap;
+  
   }
   
   /* Full-width input fields */
@@ -97,6 +100,7 @@
     margin: 3px 0 20px 0;
     border: 0cap;
     background: #f1f1f1;
+    
   }
   
   input[type=text]:focus, input[type=text]:focus {
@@ -117,4 +121,97 @@
   
   .btn:hover {
     opacity: 10;
+  }
+
+  /*------------------------------------------------------------------------POP UP BOX----------------------------------------------------------------------------------*/
+
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  .button:hover {
+    background: rgba(237,32,123,255);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup {
+    margin: 170px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 30%;
+    position: absolute;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: rgba(237,32,123,255);
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  h3 {
+    font-size: x-large;
+    font-weight: 100;
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0px auto;
+    position: relative;
   }
