@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+ <head>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
@@ -9,95 +9,108 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <title>LIVER CANCER WEBSITE</title>
-</head>
+ </head>
 
-<body>
-  <section>
-    <div class="UI">
-    </div>
-    <header>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-      <nav class="navbar">
-        <ul>
-        <img class="logo" src="" ALT="align box">
-        <a href="#"><i class="fa fa-sign-out"></i> Sign Out </a>
-        <a href="#"><i class="fa fa-product-hunt"></i> Prediction</a>
-        <a href="#"><i class="fa fa-user-md"></i> Doctor</a>
-        <a href="#"><i class="fa fa-user"></i> Profile</a>
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-        </ul>
-      </nav>
-    </header>  
+ <body>
+       <header>
+        <nav class="bottom-bar">
+        
+           <div class="logo">
+            <img src="\static\css\cancerquest-high-resolution-logo-color-on-transparent-background (1).png" alt="Logo" class="logoimg">
+           </div>
+            <ul class="bottom-bar__list">
+              <div class="bottom-bar__active-indicator"></div>
+              <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <i class="fa-solid fa-house"></i>
+              </span>Home</i>
+              <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              </span>Prediction</li>
+              <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <i class="fa-solid fa-phone"></i>
+              </span>Contact Us</li>
+              <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <i class="fa-solid fa-address-card"></i>
+              </span>About us</li>
+              <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              </span>Sign In</li>
+            </ul>
+          </nav>
+       </header>  
     
-    <div class="bg-img">
-      <h3>Popup box Windows without JavaScript</h3>
-      <div class="box">
-	     <a class="button" href="#popup1">Let me Pop up</a>
+      <div class="bg-img">
+             <div class="box">
+              <h3>If you need info regarding any attributes click here</h3></br>
+	             <a class="button" href="#popup1">Let me Pop up</a>
+             </div>
+
+            <div id="popup1" class="overlay">
+	             <div class="popup">
+		             <h2>Hello</h2>
+		                 <a class="close" href="#">&times;</a>
+		                   <div class="content">
+			                   Thank to pop me out of that button, but now i'm done so you can close this window.
+		                   </div>
+	               </div>
+            </div>
+
+                 <form action="{{ url_for('predict')}}"method="POST" class="container">
+                     <h1>Liver Cancer Prediction</h1>
+                      <p>Please Fill in the Required Details :</p><br>
+
+                      <Table>
+                        <TR>
+                        <TD>Age</TD>
+                        <TD><Input type="Text" Name="Age" Placeholder="Min val: 4 & Max val: 90" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Gender</TD>
+                        <TD><Input type="Text" Name="Gender" Placeholder="Min val: 0 & Max val: 0" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Total Bilirubin</TD>
+                        <TD><Input type="Text" Name="Total Bilirubin" Placeholder="Min val: 0.4 & Max val: 75" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Direct Bilirubin</TD>
+                        <TD><Input type="Text" Name="Direct Bilirubin" Placeholder="Min val: 0.1 & Max val: 19.7" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Alkaline Phosphotase</TD>
+                        <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="Min val: 63 & Max val: 2110" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Alamine Aminotransferase</TD>
+                        <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="Min val: 10 & Max val: 2000" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Aspartate Aminotransferase</TD>
+                        <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="Min val: 10 & Max val: 4929" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Total Protiens</TD>
+                        <TD><Input type="Text" Name="Total Protiens" Placeholder="Min val: 2.7 & Max val: 9.6" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Albumin</TD>
+                        <TD><Input type="Text" Name="Albumin" Placeholder="Min val: 0.9 & Max val: 5.5" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Albumin and Globulin Ratio</TD>
+                        <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="Min val: 0.3 & Max val: 2.8" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                      </Table>
+
+                      <Button type="Submit" Class="btn">Predict</Button>     
+                  
+                    </form>
+                    
       </div>
-
-<div id="popup1" class="overlay">
-	<div class="popup">
-		<h2>Hello</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-			Thank to pop me out of that button, but now i'm done so you can close this window.
-		</div>
-	</div>
-</div>
-
-    <form action="{{ url_for('predict')}}"method="POST" class="container">
-    <h1>Liver Cancer Prediction</h1>
-    <p>Please Fill in the Required Details :</p><br>
-        <TABLE BORDER="0">
-          <TR>
-           <TD>Age</TD>
-            <TD>
-            <INPUT TYPE="TEXT" NAME="AGE">
-            </TD>
-          </TR>
-          <TR>
-            <TD>Gender</TD>
-            <TD><INPUT TYPE="TEXT" NAME="GENDER"></TD>
-          </TR>
-          <TR>
-            <TD>Total Bilirubin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="TOTAL BILIRUBIN"></TD>
-          </TR>
-          <TR>
-            <TD>Direct Bilirubin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="DIRECT BILIRUBIN"></TD>
-          </TR>
-          <TR>
-            <TD>Alkaline Phosphotase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Alkaline Phosphotase"></TD>
-          </TR>
-          <TR>
-            <TD>Alamine Aminotransferase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Alamine Aminotransferase"></TD>
-          </TR>
-          <TR>
-            <TD>Aspartate Aminotransferase</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Aspartate Aminotransferase"></TD>
-          </TR>
-          <TR>
-            <TD>Total Protiens</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Total Protiens"></TD>
-          </TR>
-          <TR>
-            <TD>Albumin</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Albumin"></TD>
-          </TR>
-          <TR>
-            <TD>Albumin and Globulin Ratio</TD>
-            <TD><INPUT TYPE="TEXT" NAME="Albumin and Globulin Ratio"></TD>
-          </TR>
-        </TABLE>
-        <P><INPUT TYPE="SUBMIT" VALUE="PREDICT" NAME="B1" CLASS="btn"></P>
-      </form>  
-      {{ prediction_text }}
- </div>
-</body>
+       {{ prediction_text }} 
+  </body>
 </html>
