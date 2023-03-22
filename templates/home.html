@@ -1,116 +1,112 @@
 <!DOCTYPE html>
-<html>
-
- <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/css/style.css">
     <title>LIVER CANCER WEBSITE</title>
- </head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script> 
+</head>
 
- <body>
-       <header>
-        <nav class="bottom-bar">
-        
-           <div class="logo">
-            <img src="\static\css\cancerquest-high-resolution-logo-color-on-transparent-background (1).png" alt="Logo" class="logoimg">
-           </div>
-            <ul class="bottom-bar__list">
-              <div class="bottom-bar__active-indicator"></div>
-              <li class="bottom-bar__link"><span class="material-symbols-outlined">
-              <i class="fa-solid fa-house"></i>
-              </span>Home</i>
-              <li class="bottom-bar__link"><span class="material-symbols-outlined">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              </span>Prediction</li>
-              <li class="bottom-bar__link"><span class="material-symbols-outlined">
-              <i class="fa-solid fa-phone"></i>
-              </span>Contact Us</li>
-              <li class="bottom-bar__link"><span class="material-symbols-outlined">
-              <i class="fa-solid fa-address-card"></i>
-              </span>About us</li>
-              <li class="bottom-bar__link"><span class="material-symbols-outlined">
-              <i class="fa-solid fa-right-to-bracket"></i>
-              </span>Sign In</li>
-            </ul>
-          </nav>
-       </header>  
-    
-      <div class="bg-img">
-             <div class="box">
-              <h3>If you need info regarding any attributes click here</h3></br>
-	             <a class="button" href="#popup1">Let me Pop up</a>
-             </div>
+<body>
+    <header>
+            <nav class="bottom-bar">
+                <div class="logo">
+                    <img src="static\css\cancerquest-high-resolution-logo-color-on-transparent-background (1).png" alt="Logo" class="logoimg">
+                </div>
+                <ul class="bottom-bar__list">
+                    <div class="bottom-bar__active-indicator"></div>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                        <i class="fa-solid fa-house"></i>
+                      </span>Home</i>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      </span>Profile</li>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <i class="fa fa-user-md" aria-hidden="true"></i>
+                      </span>Doctor</li>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                      </span>Prediction</li>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                      </span>Sign Out</li>
+                  </ul>
+           
+             </nav>
 
-            <div id="popup1" class="overlay">
-	             <div class="popup">
-		             <h2>Hello</h2>
-		                 <a class="close" href="#">&times;</a>
-		                   <div class="content">
-			                   Thank to pop me out of that button, but now i'm done so you can close this window.
-		                   </div>
-	               </div>
-            </div>
 
-                 <form action="{{ url_for('predict')}}"method="POST" class="container">
-                     <h1>Liver Cancer Prediction</h1>
-                      <p>Please Fill in the Required Details :</p><br>
-
-                      <Table>
-                        <TR>
-                        <TD>Age</TD>
-                        <TD><Input type="Text" Name="Age" Placeholder="Min val: 4 & Max val: 90" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Gender</TD>
-                        <TD><Input type="Text" Name="Gender" Placeholder="Min val: 0 & Max val: 0" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Total Bilirubin</TD>
-                        <TD><Input type="Text" Name="Total Bilirubin" Placeholder="Min val: 0.4 & Max val: 75" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Direct Bilirubin</TD>
-                        <TD><Input type="Text" Name="Direct Bilirubin" Placeholder="Min val: 0.1 & Max val: 19.7" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Alkaline Phosphotase</TD>
-                        <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="Min val: 63 & Max val: 2110" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Alamine Aminotransferase</TD>
-                        <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="Min val: 10 & Max val: 2000" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Aspartate Aminotransferase</TD>
-                        <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="Min val: 10 & Max val: 4929" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Total Protiens</TD>
-                        <TD><Input type="Text" Name="Total Protiens" Placeholder="Min val: 2.7 & Max val: 9.6" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Albumin</TD>
-                        <TD><Input type="Text" Name="Albumin" Placeholder="Min val: 0.9 & Max val: 5.5" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                        <TD>Albumin and Globulin Ratio</TD>
-                        <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="Min val: 0.3 & Max val: 2.8" Required="Required"></TD>
-                        </TR>
-                        <TR>
-                      </Table>
-
-                      <Button type="Submit" Class="btn">Predict</Button>     
-                  
-                    </form>
-                    
+     <div class="bg-img">
+      <div class="box">
+       <h3>If you need info regarding any attributes click here</h3></br>
+        <a class="button" href="#popup1">Let me Pop up</a>
       </div>
-       {{ prediction_text }} 
-  </body>
+
+     <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Hello</h2>
+              <a class="close" href="#">&times;</a>
+                <div class="content">
+                  Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+          </div>
+     </div>
+
+          <form action="{{ url_for('predict')}}"method="POST" class="container">
+              <h1>Liver Cancer Prediction Form</h1><br>
+               <Table>
+                <TR>
+                <TD>Age</TD>
+                <TD><Input type="Text" Name="Age" Placeholder="Values range : 4 - 90" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Gender</TD>
+                <TD><Input type="Text" Name="Gender" Placeholder="Values range : 0 - 0" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Total Bilirubin</TD>
+                <TD><Input type="Text" Name="Total Bilirubin" Placeholder="Values range : 0.4 - 75" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Direct Bilirubin</TD>
+                <TD><Input type="Text" Name="Direct Bilirubin" Placeholder="Values range : 0.1 - 19.7" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Alkaline Phosphotase</TD>
+                <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="Values range : 63 - 2110" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Alamine Aminotransferase</TD>
+                <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="Values range : 10 - 2000" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Aspartate Aminotransferase</TD>
+                <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="Values range : 10 - 4929" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Total Protiens</TD>
+                <TD><Input type="Text" Name="Total Protiens" Placeholder="Values range : 2.7 - 9.6" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Albumin</TD>
+                <TD><Input type="Text" Name="Albumin" Placeholder="Values range : 0.9 - 5.5" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Albumin and Globulin Ratio</TD>
+                <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="Values range : 0.3 - 2.8" Required="Required"></TD>
+                </TR>
+                <TR>
+              </Table>
+
+              <Button type="Submit" Class="btn">PREDICT</Button>     
+          
+            </form>
+            
+</div>
+{{ prediction_text }} 
+
+</header>
+</body>
 </html>
