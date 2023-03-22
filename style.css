@@ -9,68 +9,124 @@
 
 /*-------------------------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------*/
 
-.navbar 
+.body
 {
-  background-image: linear-gradient(15deg, black 0%, rgb(3, 8, 105) 120%);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.navbar ul
+.header
 {
-  overflow: auto;
+  width: 100%;
+  height: 100vh;
 }
-  
-/* Navbar links */
-.navbar a 
+.logoimg
 {
-  float: right;
-  text-align: center;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  margin-top: 10px;
-
+  position:absolute;
+  z-index:-1;
+  height: 10px;
+  width: 290px;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
-  
-/* Navbar links on mouse-over */
-.navbar a:hover 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+:root 
 {
-  background-color: rgba(237,32,123,255);
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-  
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) 
+.material-symbols-outlined 
 {
-  .navbar a 
-  {
-    float: none;
-    display: block;
-  }
+  font-size: 24px;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 40;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-
-.navbar input
+.bottom-bar 
 {
-  border: 2px black;
-  border-radius: 20px;
-  padding: 30px 300px;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  background: black;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo
-{ 
+.bottom-bar__list {
+  flex-basis: 32rem;
+  display: flex;
   position: relative;
-  margin-left: 10px;
-  margin-top: 10px;
-  width: 150px;
-  height: auto; 
+  cursor: pointer;
 }
+   
+.bottom-bar__link {
+  color: #ffffff;
+  flex: 1;
+  font-size: 0.675rem;
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  z-index: 2;
+
+}
+
+/* .bottom-bar_link:hover, .bottom-barlink:focus, .bottom-bar_link:active {
+    animation-delay: 0s, .3s;
+    animation-direction: normal, alternate;
+    animation-duration: .3s, 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1, infinite;
+    animation-name: hover-bob-float, hover-bob;
+    animation-timing-function: ease-out, ease-in-out;
+    cursor: pointer;
+  }
+  @keyframes hover-ab {
+    0% {
+      transform: translateY(6px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(6px);
+    }
+  }
+  @keyframes hover-bob-float {
+    100% {
+      transform: translateY(6px);
+    }
+  }  */
+ 
+  .bottom-bar_link:hover, .bottom-barlink:focus, .bottom-bar_link:active 
+  {
+    animation: hover-pulse 1s linear infinite !important;
+    cursor: pointer;
+  }
+  
+  @keyframes hover-pulse {
+    25% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(0.9);
+    }
+  }
 
 /*------------------------------------------------------------------------FORM LAYOUT----------------------------------------------------------------------------------*/
 
-.bg-img {
+.bg-img 
+{
      background-image: url("https://assets.technologynetworks.com/production/dynamic/images/content/322699/hepatitis-c-drugs-reduce-liver-related-deaths-by-46-322699-640x360.jpg");
-     min-height: 1075px;
-     margin-top: 2px;
+     min-height: 900px;
+     margin-top: 58px;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -80,36 +136,35 @@
   }
   
   /* Add styles to the form container */
-  .container {
-    position: absolute;
+  .container 
+  {
+    position: relative;
     align-content: center;
-    margin-left: 525px;
-    margin-top: 10px;
-    max-width: 600px;
+    margin-left: 530px;
+    max-width: 455px;
     padding: 15px;
     background-color: white;
-    border: 0cap;
-  
   }
   
   /* Full-width input fields */
     input[type=text], input[type=text] 
     {
-    width: 100%;
-    padding: 15px;
-    margin: 3px 0 20px 0;
+    width: 105%;
+    padding: 10px;
+    margin: 3px 0 10px 0;
     border: 0cap;
-    background: #f1f1f1;
-    
+    background: #f1f1f1; 
   }
   
-  input[type=text]:focus, input[type=text]:focus {
+  input[type=text]:focus, input[type=text]:focus 
+  {
     background-color: #ddd;
-    outline:#0470aa;
+    outline: black;
   }
   
   /* Set a style for the submit button */
-  .btn {
+  .btn 
+  {
     background-color: rgb(10, 10, 132);
     color: white;
     padding: 16px 20px;
@@ -119,35 +174,43 @@
     opacity: 0.8;
   }
   
-  .btn:hover {
+  .btn:hover 
+  {
     opacity: 10;
   }
 
   /*------------------------------------------------------------------------POP UP BOX----------------------------------------------------------------------------------*/
+   
+.box 
+{
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
+  background-clip: padding-box;
+  text-align: center;
+}
 
-  .box {
-    width: 40%;
-    margin: 0 auto;
-    padding: 25px;
-    text-align: center;
+.button 
+{
+  background-color: rgba(255,65,54,255);
+  font-size: 1em;
+  padding: 4px;
+  color: #fff;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+  .button:hover 
+  {
+    background: rebeccapurple;
   }
 
-  .button {
-    font-size: 1em;
-    padding: 10px;
-    color: #fff;
-    border: 2px solid white;
-    border-radius: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-  }
-
-  .button:hover {
-    background: rgba(237,32,123,255);
-  }
-
-  .overlay {
+  .overlay 
+  {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -159,27 +222,32 @@
     opacity: 0;
   }
 
-  .overlay:target {
+  .overlay:target 
+  {
     visibility: visible;
     opacity: 1;
   }
 
-  .popup {
-    margin: 170px auto;
+  .popup 
+  {
+    margin: 195px auto;
     padding: 20px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 1px;
     width: 30%;
-    position: absolute;
+    position: relative;
     transition: all 5s ease-in-out;
+    margin-left: 50px;
   }
   
-  .popup h2 {
+  .popup h2 
+  {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
   }
-  .popup .close {
+  .popup .close 
+  {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -189,15 +257,18 @@
     text-decoration: none;
     color: #333;
   }
-  .popup .close:hover {
-    color: rgba(237,32,123,255);
+  .popup .close:hover 
+  {
+    color: rgba(255,65,54,255);
   }
-  .popup .content {
+  .popup .content 
+  {
     max-height: 30%;
     overflow: auto;
   }
 
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 700px)
+  {
     .box{
       width: 70%;
     }
@@ -206,12 +277,12 @@
     }
   }
 
-  h3 {
+  h3 
+  {
     font-size: x-large;
-    font-weight: 100;
+    font-weight: 200;
     text-align: center;
     font-family: Tahoma, Arial, sans-serif;
     color: #ffffff;
-    margin: 0px auto;
     position: relative;
   }
